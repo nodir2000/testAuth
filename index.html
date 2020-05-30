@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+</head>
+<script src="index.js"></script>
+<body>
+    <h1>Enter number</h1>
+
+    <input type="text" id="number" placeholder="+998*********" required>
+    <div id="recaptcha-container"></div>
+    <button type="submit" onclick="phoneAuth();">SendCode</button>
+
+    <br>
+    <h1>Verification code</h1>
+    <input type="text" id="verificationCode" placeholder="Enter verification code" required>
+    <button type="submit" onclick="codeverify();">Verify code</button>
+
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyCRLXzTb7IzgGiw98a37m4iawEXJs4QYdU",
+        authDomain: "verify-code-e9ea5.firebaseapp.com",
+        databaseURL: "https://verify-code-e9ea5.firebaseio.com",
+        projectId: "verify-code-e9ea5",
+        storageBucket: "verify-code-e9ea5.appspot.com",
+        messagingSenderId: "721408504623",
+        appId: "1:721408504623:web:988aa96cd1733f8af467da",
+        measurementId: "G-3X4NQ7F51M"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+</html>
